@@ -10,12 +10,14 @@
 	<body>
 		<style>
 			body {
-				margin: 0
+				margin: 0;
+				background: #000;
+				overflow: hidden;
 			}
 
 			.overlay {
 				position: absolute;
-				left:0;
+				right:0;
 				top:0;
 				background: rgba(0,0,0,.5);
 				padding: 10px;
@@ -23,6 +25,7 @@
 				color: #eaeaea;
 				font-size: 18pt;
 				line-height: 1.3333em;
+				margin: 4%;
 			}
 
 			.overlay em {
@@ -40,32 +43,22 @@
 			img {
 				height: auto;
 				width: 100%;
+				display: block;
 			}
 
 			#ov1 {
-				left: 10%;
-				top: 10%;
-				width: 600px;
-			}
-
-			#ov2 {
-				left: 70%;
-				top: 10%;
 				width: 500px;
 			}
 
-			#ov3 {
-				left: 70%;
-				top: 10%;
-			}
-
-			#ov4 {
-				left: 70%;
-				top: 10%;
+			#ov2 {
+				left: 6%;
+				right: auto;
+				top: 6%;
+				width: 600px;
 			}
 
 			#ov5 {
-				left: calc(50% - 200px);
+				left: calc(50% - 200px - 10px);
 				top: 30%;
 				width: 400px;
 			}
@@ -86,6 +79,8 @@
 			#slide3:target + #slide2 + #slide1, #slide3:target + #slide2, #slide3:target,
 			#slide4:target + #slide3 + #slide2 + #slide1, #slide4:target + #slide3 + #slide2, #slide4:target + #slide3, #slide4:target {
 				transform: translateX(-100%);
+				-webkit-transform: translateX(-100%);
+				-ms-transform: translateX(-100%);
 			}
 		</style>
 
@@ -107,12 +102,12 @@
 
 			<div id="slide2" class="wrapper">
 				<a href="#slide2"><div class="image"><img src="images/laser.jpg" /></div></a>
-				<div class="overlay" id="ov1">Bei diesem Projekt möchten wir einen <em>Schneidlaser</em> bauen, der stark genug ist, um Material zu schneiden oder Oberflächen zu gravieren. Die Leistung hängt maßgeblich vom eingesetzten Laser ab. Der finale Aufbau soll ähnlich einem X/Y-Plotter aufgebaut werden. Statt des Stifts wird der Laserstrahl auf das Material gelenkt. Haupteinsatzgebiet dürfte dann das direkte Erstellen von PCBs aus unbeschichteten Platten sein.</div>
+				<div class="overlay" id="ov2">Bei diesem Projekt möchten wir einen <em>Schneidlaser</em> bauen, der stark genug ist, um Material zu schneiden oder Oberflächen zu gravieren. Die Leistung hängt maßgeblich vom eingesetzten Laser ab. Der finale Aufbau soll ähnlich einem X/Y-Plotter aufgebaut werden. Statt des Stifts wird der Laserstrahl auf das Material gelenkt. Haupteinsatzgebiet dürfte dann das direkte Erstellen von PCBs aus unbeschichteten Platten sein.</div>
 			</div>
 
 			<div id="slide1" class="wrapper">
 				<a href="#slide1"><div class="image"><img src="images/borg.jpg" /></div></a>
-				<div class="overlay" id="ov2">Der <em>Borg16</em> ist eine auf Andres originalem 16x16 Borg basierende, professionell hergestellte Platine zur Ansteuerung von 256 Leds. Üblicherweise sind diese als eine Matrix von 16x16 Leds angeordnet, aber auch andere Formate sind möglich. Sie bietet eine serielle Schnitstelle und einen Anschluss für bis zu zwei Joysticks im 9-Pin Atari-Standard. Zusätzlich kann ein Canbus-Controller oder RMF12 Funkmodul zur Vernetzung bestückt werden.</div>
+				<div class="overlay" id="ov1">Der <em>Borg16</em> ist eine auf Andres originalem 16x16 Borg basierende, professionell hergestellte Platine zur Ansteuerung von 256 Leds. Üblicherweise sind diese als eine Matrix von 16x16 Leds angeordnet, aber auch andere Formate sind möglich. Sie bietet eine serielle Schnitstelle und einen Anschluss für bis zu zwei Joysticks im 9-Pin Atari-Standard. Zusätzlich kann ein Canbus-Controller oder RMF12 Funkmodul zur Vernetzung bestückt werden.</div>
 			</div>
 		</div>
 	</body>

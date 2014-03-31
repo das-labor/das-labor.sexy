@@ -1,0 +1,86 @@
+@font-face {
+	font-family: Labor;
+	src: url(labor_one.ttf);
+}
+
+body {
+	margin: 0;
+	background: #000;
+	overflow: hidden;
+}
+
+.overlay {
+	position: absolute;
+	right:0;
+	top:0;
+	background: rgba(48,48,48,.9);
+	padding: 10px;
+	border-radius: 8px;
+	color: #eaeaea;
+	font-size: 18pt;
+	line-height: 1.3333em;
+	margin: 4%;
+}
+
+.overlay em {
+	font-size: 120%;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.wrapper {
+	position: absolute;
+	width: 100%;
+	transition: 1s ease-in-out;
+}
+
+.hilight {
+	text-transform: lowercase;
+	font-family: Labor;
+	font-size: 130%;
+	color: #9a09a9;
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+	width: 100%;
+	display: block;
+}
+
+#ov1 {
+	width: 500px;
+}
+
+#ov2 {
+	left: 6%;
+	right: auto;
+	top: 6%;
+	width: 600px;
+}
+
+#ov5 {
+	left: calc(50% - 200px - 10px);
+	top: 30%;
+	width: 400px;
+}
+
+#slideshow {
+	position: absolute;
+	width: 100%;
+}
+
+#slide1 { top:0; left:0; }
+#slide2 { top:0; left:0; }
+#slide3 { top:0; left:0; }
+#slide4 { top:0; left:0; }
+#slide5 { top:0; left:0; }
+
+#slide1:target,
+#slide2:target + #slide1, #slide2:target,
+#slide3:target + #slide2 + #slide1, #slide3:target + #slide2, #slide3:target,
+#slide4:target + #slide3 + #slide2 + #slide1, #slide4:target + #slide3 + #slide2, #slide4:target + #slide3, #slide4:target {
+	transform: translateX(-100%);
+	-webkit-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+}
